@@ -30,6 +30,12 @@ namespace sim_komputer
             connection = koneksi.GetConnection();
             InitializeData();
             dataGridView2.CellClick += new DataGridViewCellEventHandler(dataGridView2_CellClick);
+
+            button1.Region = System.Drawing.Region.FromHrgn(style.CreateRoundRectRgn(0, 0, button1.Width, button1.Height, 7, 7));
+            bTupdate.Region = System.Drawing.Region.FromHrgn(style.CreateRoundRectRgn(0, 0, bTupdate.Width, bTupdate.Height, 7, 7));
+            bTcharge.Region = System.Drawing.Region.FromHrgn(style.CreateRoundRectRgn(0, 0, bTcharge.Width, bTcharge.Height, 7, 7));
+            bTremove.Region = System.Drawing.Region.FromHrgn(style.CreateRoundRectRgn(0, 0, bTremove.Width, bTremove.Height, 7, 7));
+
         }
         public void SetKasirId(int kasirId)
         {
@@ -76,7 +82,6 @@ namespace sim_komputer
             cartTable.Columns.Add("Harga", typeof(decimal));
             cartTable.Columns.Add("Total", typeof(decimal));
 
-            // Tambahkan kolom untuk tampilan Print Preview
             cartTableForPrint.Columns.Add("Nama Barang", typeof(string));
             cartTableForPrint.Columns.Add("Jumlah Dibeli", typeof(int));
             cartTableForPrint.Columns.Add("Subtotal", typeof(decimal));

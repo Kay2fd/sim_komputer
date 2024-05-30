@@ -28,7 +28,6 @@ namespace sim_komputer
 
             btDashboard.Region = System.Drawing.Region.FromHrgn(style.CreateRoundRectRgn(0, 0, btDashboard.Width, btDashboard.Height, 5, 5));
             btOrder.Region = System.Drawing.Region.FromHrgn(style.CreateRoundRectRgn(0, 0, btOrder.Width, btOrder.Height, 5, 5));
-            btPayment.Region = System.Drawing.Region.FromHrgn(style.CreateRoundRectRgn(0, 0, btPayment.Width, btPayment.Height, 5, 5));
             btLogout.Region = System.Drawing.Region.FromHrgn(style.CreateRoundRectRgn(0, 0, btLogout.Width, btLogout.Height, 7, 7));
         }
         public void SetKasirId(int kasirId)

@@ -49,6 +49,7 @@
             // 
             // tBsearch
             // 
+            this.tBsearch.BackColor = System.Drawing.SystemColors.ControlDark;
             this.tBsearch.Location = new System.Drawing.Point(563, 21);
             this.tBsearch.Name = "tBsearch";
             this.tBsearch.Size = new System.Drawing.Size(114, 20);
@@ -76,7 +77,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,6 +100,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(33, 274);
             this.comboBox1.Name = "comboBox1";
@@ -108,6 +110,7 @@
             // 
             // tBqty
             // 
+            this.tBqty.BackColor = System.Drawing.SystemColors.ControlDark;
             this.tBqty.Location = new System.Drawing.Point(33, 328);
             this.tBqty.Name = "tBqty";
             this.tBqty.Size = new System.Drawing.Size(100, 20);
@@ -146,6 +149,7 @@
             // 
             // tBqty2
             // 
+            this.tBqty2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.tBqty2.Location = new System.Drawing.Point(33, 639);
             this.tBqty2.Name = "tBqty2";
             this.tBqty2.Size = new System.Drawing.Size(100, 20);
@@ -154,7 +158,7 @@
             // 
             // bTupdate
             // 
-            this.bTupdate.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.bTupdate.BackColor = System.Drawing.SystemColors.ControlDark;
             this.bTupdate.FlatAppearance.BorderSize = 0;
             this.bTupdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bTupdate.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -168,7 +172,7 @@
             // 
             // bTremove
             // 
-            this.bTremove.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.bTremove.BackColor = System.Drawing.SystemColors.ControlDark;
             this.bTremove.FlatAppearance.BorderSize = 0;
             this.bTremove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bTremove.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -182,7 +186,7 @@
             // 
             // bTcharge
             // 
-            this.bTcharge.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.bTcharge.BackColor = System.Drawing.SystemColors.ControlDark;
             this.bTcharge.FlatAppearance.BorderSize = 0;
             this.bTcharge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bTcharge.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

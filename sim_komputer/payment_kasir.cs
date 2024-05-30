@@ -34,6 +34,9 @@ namespace sim_komputer
 
             printPreviewDialog = new PrintPreviewDialog();
             printPreviewDialog.Document = printDocument;
+
+            button1.Region = System.Drawing.Region.FromHrgn(style.CreateRoundRectRgn(0, 0, button1.Width, button1.Height, 7, 7));
+            bTbyr.Region = System.Drawing.Region.FromHrgn(style.CreateRoundRectRgn(0, 0, bTbyr.Width, bTbyr.Height, 7, 7));
         }
         public void SetKasirId(int kasirId)
         {
@@ -102,8 +105,6 @@ namespace sim_komputer
                 }
 
                 SaveTransaction(paymentAmount, change);
-
-                MessageBox.Show($"Pembayaran berhasil. Kembalian: Rp {change.ToString("N0")}");
 
                 ResetForm();
 

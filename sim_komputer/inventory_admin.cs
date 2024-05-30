@@ -357,5 +357,10 @@ namespace sim_komputer
         {
             searchData(tSearch.Text);
         }
+
+        private void inventory_admin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

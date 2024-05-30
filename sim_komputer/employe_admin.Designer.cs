@@ -69,6 +69,7 @@
             // 
             // tBpw
             // 
+            this.tBpw.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.tBpw.Location = new System.Drawing.Point(189, 501);
             this.tBpw.Name = "tBpw";
             this.tBpw.Size = new System.Drawing.Size(100, 20);
@@ -86,6 +87,7 @@
             // 
             // tBusn
             // 
+            this.tBusn.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.tBusn.Location = new System.Drawing.Point(24, 546);
             this.tBusn.Name = "tBusn";
             this.tBusn.Size = new System.Drawing.Size(100, 20);
@@ -103,6 +105,7 @@
             // 
             // tBname
             // 
+            this.tBname.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.tBname.Location = new System.Drawing.Point(24, 501);
             this.tBname.Name = "tBname";
             this.tBname.Size = new System.Drawing.Size(100, 20);
@@ -132,7 +135,7 @@
             this.bTedit.Name = "bTedit";
             this.bTedit.Size = new System.Drawing.Size(91, 31);
             this.bTedit.TabIndex = 41;
-            this.bTedit.Text = "Edit";
+            this.bTedit.Text = "Update";
             this.bTedit.UseVisualStyleBackColor = false;
             this.bTedit.Click += new System.EventHandler(this.bTedit_Click);
             // 

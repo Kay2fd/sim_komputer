@@ -97,6 +97,7 @@
             this.label11.Size = new System.Drawing.Size(183, 25);
             this.label11.TabIndex = 14;
             this.label11.Text = "Admin Dashboard";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // panel1
             // 

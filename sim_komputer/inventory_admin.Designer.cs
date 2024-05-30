@@ -62,7 +62,7 @@
             // 
             // tSearch
             // 
-            this.tSearch.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.tSearch.BackColor = System.Drawing.SystemColors.ControlDark;
             this.tSearch.Location = new System.Drawing.Point(448, 25);
             this.tSearch.Name = "tSearch";
             this.tSearch.Size = new System.Drawing.Size(179, 20);
@@ -72,7 +72,7 @@
             // 
             // btRemove
             // 
-            this.btRemove.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btRemove.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btRemove.FlatAppearance.BorderSize = 0;
             this.btRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btRemove.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -86,7 +86,7 @@
             // 
             // btEdit
             // 
-            this.btEdit.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btEdit.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btEdit.FlatAppearance.BorderSize = 0;
             this.btEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEdit.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -100,7 +100,7 @@
             // 
             // btAdd
             // 
-            this.btAdd.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btAdd.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btAdd.FlatAppearance.BorderSize = 0;
             this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAdd.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -239,6 +239,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "inventory_admin";
             this.Size = new System.Drawing.Size(714, 640);
+            this.Load += new System.EventHandler(this.inventory_admin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
