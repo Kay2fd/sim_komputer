@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,14 +22,93 @@ namespace sim_komputer
             this.currentKasirId = kasirId;
             this.namaKasir = namaKasir;
 
-            if (label11 != null)
+            if (label8 != null)
             {
-                label11.Text = namaKasir;
+                label8.Text = namaKasir;
             }
 
             btDashboard.Region = System.Drawing.Region.FromHrgn(style.CreateRoundRectRgn(0, 0, btDashboard.Width, btDashboard.Height, 5, 5));
             btOrder.Region = System.Drawing.Region.FromHrgn(style.CreateRoundRectRgn(0, 0, btOrder.Width, btOrder.Height, 5, 5));
             btLogout.Region = System.Drawing.Region.FromHrgn(style.CreateRoundRectRgn(0, 0, btLogout.Width, btLogout.Height, 7, 7));
+
+            UpdateJumlahBarang();
+            UpdateJumlahPenjualanProduk();
+        }
+        private int GetJumlahPenjualanProduk()
+        {
+            int jumlahPenjualan = 0;
+            string query = "SELECT SUM(jumlah_dibeli) FROM pemesanan_detail";
+
+            using (SqlConnection connection = koneksi.GetConnection())
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                try
+                {
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        jumlahPenjualan = Convert.ToInt32(result);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error mengambil jumlah penjualan produk: " + ex.Message);
+                }
+            }
+            return jumlahPenjualan;
+        }
+
+        private void UpdateJumlahPenjualanProduk()
+        {
+            try
+            {
+                int jumlahPenjualan = GetJumlahPenjualanProduk();
+                if (label4 != null)
+                {
+                    label4.Text = jumlahPenjualan.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+        private void UpdateJumlahBarang()
+        {
+            try
+            {
+                int jumlahBarang = GetJumlahBarang();
+                if (label6 != null)
+                {
+                    label6.Text = jumlahBarang.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private int GetJumlahBarang()
+        {
+            int jumlahBarang = 0;
+            string query = "SELECT COUNT(*) FROM barang";
+
+            using (SqlConnection connection = koneksi.GetConnection())
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                try
+                {
+                    connection.Open();
+                    jumlahBarang = (int)command.ExecuteScalar();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+            return jumlahBarang;
         }
         public void SetKasirId(int kasirId)
         {

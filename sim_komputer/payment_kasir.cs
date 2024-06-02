@@ -170,32 +170,6 @@ namespace sim_komputer
             graphics.DrawString("TERIMAKASIH", font, new SolidBrush(Color.Black), startX, startY + offset);
         }
 
-        private DataTable GetTransactionDetails()
-        {
-            using (SqlConnection connection = koneksi.GetConnection())
-            {
-                DataTable detailTable = new DataTable();
-                try
-                {
-                    connection.Open();
-                    string sql = "SELECT B.nama_barang, PD.jumlah_dibeli, PD.subtotal " +
-                                 "FROM pemesanan_detail PD " +
-                                 "JOIN barang B ON PD.id_barang = B.id_barang " +
-                                 "WHERE PD.id_pemesanan = @no_bon";
-                    using (SqlCommand command = new SqlCommand(sql, connection))
-                    {
-                        command.Parameters.AddWithValue("@no_bon", noBon);
-                        SqlDataAdapter adapter = new SqlDataAdapter(command);
-                        adapter.Fill(detailTable);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error retrieving transaction details: " + ex.Message);
-                }
-                return detailTable;
-            }
-        }
 
         private string GetKasirName()
         {

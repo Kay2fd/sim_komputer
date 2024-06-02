@@ -67,7 +67,7 @@
             this.tSearch.Name = "tSearch";
             this.tSearch.Size = new System.Drawing.Size(179, 20);
             this.tSearch.TabIndex = 43;
-            this.tSearch.Text = "Search";
+            this.tSearch.Text = "Product Name";
             this.tSearch.TextChanged += new System.EventHandler(this.tSearch_TextChanged);
             // 
             // btRemove

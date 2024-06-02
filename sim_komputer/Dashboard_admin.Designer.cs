@@ -65,7 +65,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 38);
+            this.label3.Location = new System.Drawing.Point(24, 38);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 31);
             this.label3.TabIndex = 1;
@@ -87,9 +87,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(25, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 25);
+            this.label1.Size = new System.Drawing.Size(72, 25);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Dashboard";
+            this.label1.Text = "Admin";
             // 
             // panel2
             // 

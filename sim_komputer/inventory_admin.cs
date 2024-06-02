@@ -183,8 +183,8 @@ namespace sim_komputer
                             command.ExecuteNonQuery();
 
                             MessageBox.Show("Succesfully updated!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            clear(); // Kosongkan input setelah update
-                            showData(); // Tampilkan data terbaru setelah update
+                            clear();
+                            showData();
                         }
                         catch (Exception ex)
                         {
@@ -224,8 +224,8 @@ namespace sim_komputer
                         command.ExecuteNonQuery();
 
                         MessageBox.Show("Succesfully deleted", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clear(); // Kosongkan input setelah delete
-                        showData(); // Tampilkan data terbaru setelah delete
+                        clear();
+                        showData(); 
                     }
                     catch (Exception ex)
                     {
@@ -270,50 +270,11 @@ namespace sim_komputer
                 tBrand.Text = row.Cells["brand"].Value.ToString();
             }
         }
-        public void searchData()
-        {
-
-            if (!string.IsNullOrEmpty(tSearch.Text))
-            {
-                try
-                {
-                    sql = "SELECT * FROM barang WHERE nama_barang LIKE '%' + @search + '%'";
-                    command = new SqlCommand(sql, connection);
-                    command.Parameters.AddWithValue("@search", tSearch.Text);
-
-                    adapter = new SqlDataAdapter(command);
-                    tabel = new DataTable();
-                    adapter.Fill(tabel);
-
-                    if (tabel.Rows.Count > 0)
-                    {
-                        dataGridView1.DataSource = tabel;
-                    }
-                    else
-                    {
-                        MessageBox.Show("No data found for the search keyword: " + tSearch.Text);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error searching data: " + ex.Message);
-                }
-                finally
-                {
-                    connection.Close();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please enter a search keyword!");
-            }
-        }
 
         private void btAdd_Click(object sender, EventArgs e)
         {
             insertData();
         }
-
         private void btEdit_Click(object sender, EventArgs e)
         {
             updateData();
